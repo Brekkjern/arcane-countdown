@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="stylesheet.css">
+
+	%sveltekit.head%
+</head>
+
+<body>
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
+<style>
+	body {
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+	}
+</style>
+
+<script>
+	let background = "backgrounds/" + Math.ceil( Math.random() * 60 ) + ".webp";
+	document.body.background = background;
+	console.log( "Background: " + background )
+</script>
+
+</html>
